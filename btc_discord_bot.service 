@@ -1,0 +1,17 @@
+[Unit]
+Description='BTC Discord Bot(status)'
+After=network.target
+
+[Service]
+Type=simple
+User=dima
+Group=dima
+
+Environment=%path-to-bot$/BTC_Discord_Bot
+WorkingDirectory=%path-to-bot$/BTC_Discord_Bot
+ExecStart=%path-to-bot$/BTC_Discord_Bot/run.sh
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=network.target
